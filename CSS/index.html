@@ -1,0 +1,58 @@
+<!-- 
+3 ways for adding css:
+
+file linking 
+style tag in the html page 
+inline css 
+
+selectors:
+universal selector(*)
+Element selector (h1, h2, p, div)
+class selector (set styles to multiple same classes)
+Id selector (uniqly set style)
+group selector 
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    #diff{
+        color: rgb(96, 188, 5);
+    }
+</style>
+<body>
+    <h1 class="heading" id="diff">Welcome to my page</h1>
+    <h2 style="color: brown; font-size: 40px;">CSS stylings........</h2>
+
+    <p id="diff">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos, voluptatum.</p>
+
+    <div>
+        <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis quisquam, explicabo debitis quo magni hic et similique consequatur deserunt illo.</p>
+    </div>
+
+
+    <div class="box"><p>I am inside</p></div>
+
+    <h4 style="background-color: rgb(180, 249, 204);">I am a block element, I always start with a new line</h4>
+    <h4>I am a block element, I always start with a new line</h4>
+    <span style="background-color: rgb(180, 249, 204);;">Inline tage</span>
+    <span>Inline tage</span>
+
+    <div class="container">
+        <div class="boxx"></div>
+        <div class="boxx"></div>
+        <div class="boxx"></div>
+        <div class="boxx"></div>
+    </div>
+
+    
+
+</body>
+</html>

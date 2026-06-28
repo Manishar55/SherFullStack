@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form>
+
+        <!-- It will define a category -->
+        <fieldset style="width: 50%;">
+            <legend>Persional Details: </legend> <!--Heading for the fieldset (category)-->
+
+            <label for="name">Name: </label> <!-- if you click on "Name" input tag will be highlighted -->
+            <input id="name" placeholder="Enter your name" type="text"> <br><br>
+
+            <label for="email">Email: </label>
+            <input id="email" placeholder="Enter your email" type="email"> <br><br>
+
+            <label for="number">Number: </label>
+            <input id="number" placeholder="Enter your number" type="text"> <br><br>
+
+        </fieldset>
+        <br><br>
+        
+
+        <select name="hlo">
+            <option>JSR</option>
+            <option>BBSR</option>
+            <option>Mum</option>
+            <option>Hyd</option>
+        </select>
+        <br><br>
+
+        <label for="courses">Select Courses:</label>
+        <select id="courses">
+            <optgroup label="Frontend">
+                <option>HTML</option>
+                <option>CSS</option>
+                <option>JS</option>
+            </optgroup>
+            <optgroup label="Backend">
+                <option>Nodde.js</option>
+                <option>MongoDB</option>
+                <option>Express.js</option>
+            </optgroup>
+        </select>
+        <br><br>
+
+        <input type="time" >  
+        <input type="checkbox">Yes</input>
+        <input type="checkbox">No</input><br><br>
+        <input type="range" max="20" value="5"> <br><br>
+        <input type="file"><br><br>
+
+        <textarea placeholder="Enter your feedback"></textarea> <br><br>
+
+        <!-- FAQ dropdown -->
+        <details>
+            <summary>Open Me</summary>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio sunt quia quos velit magni 
+                ducimus repellendus voluptatem, placeat inventore laudantium esse sed quas saepe minima iusto 
+                vitae, corrupti eligendi laboriosam.
+            </p>
+        </details>
+        <br><br>
+
+        <h3 contenteditable="">Hii this is...</h3>
+        <h4 draggable="true">Manisha</h4>
+
+
+        <button>Submit</button>
+    </form>
+</body>
+</html>

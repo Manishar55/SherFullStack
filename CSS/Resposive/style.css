@@ -1,0 +1,27 @@
+/* Units
+px - pixels
+% - percentage
+vh - viewport-height
+vw - viewport-width
+em - relative to parent font size
+rem - relative to root HTML
+vmin - for smaller side
+dvh - dynamic viewport height
+*/
+
+*{
+    margin: 0;  /* outer spaces */
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+.container{
+    height: 50%; /*if we give 50px, it will not be responsize*/
+    width: 50%;
+    background-color: blueviolet;
+}

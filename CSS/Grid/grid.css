@@ -1,0 +1,28 @@
+
+html, body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+}
+.heading{
+    text-align: center;
+}
+.container{
+    height: 90%;
+    width: 100%;
+    background-color: #cdcaca;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+.box{
+    background-color:aqua;
+    border: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+

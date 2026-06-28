@@ -1,0 +1,64 @@
+/* techniques for center an element */
+body, html{
+    height: 100%;
+    width: 100%;
+}
+.parent{
+    width: 50%;
+    height: 50%;
+    background-color: aqua;
+
+    /* 1 */
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+
+    /* 2 */
+    position: relative;
+}
+
+.child{
+    height: 60%;
+    width: 60%;
+    background-color: blueviolet;
+
+    /* 2 */
+    position: absolute;
+    top: 50%;
+    left: 50%; /*it will consider the corner*/
+    transform: translate(-50%, -50%);  /*now it will consider the center*/
+}
+
+/* Animation */
+.container{
+    height: 60%;
+    width: 60%;
+    background-color: yellow;
+}
+.box{
+    height: 10%;
+    width: 5%;
+    background-color: brown;
+    /* animation: moveBox 2s  1s 5 x step-start; */
+    animation-name: moveBox;
+    animation-duration: 1s;
+}
+/* @keyframes moveBox {
+    from{
+        transform: translateX(0px);
+    }
+    to{
+        transform: translate(900px);
+    }
+} */
+ @keyframes moveBox {
+    0%{
+        transform: translateX(0px);
+    }
+    50%{
+        transform: translate(500px);
+    }
+    100%{        
+        transform: translate(900px);        
+    }
+}

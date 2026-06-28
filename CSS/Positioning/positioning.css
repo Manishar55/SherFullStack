@@ -1,0 +1,43 @@
+ /* position: relative;--> it doesn't drop it's original position, it will always add margin from it's original position*/
+ /* position: absolute;----> means you can place it anywhere, it will overlap others */
+html, body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 200%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.heading{
+    text-align: center;
+}
+
+.container{
+    height: 20%;
+    width: 20%;
+    background-color: aqua;
+    /* position: relative; */
+    margin-top: 10px; 
+}
+
+.diff{
+    background-color: blue;
+    position: relative;
+    left: 10%;
+    top: 10%;
+    /* margin-top: 10%; */
+}
+
+.diff2{
+    background-color: brown;
+    /* position: absolute; */
+    position: fixed;   
+    top: 10%;
+}
+#stick{
+    position: sticky;
+    top: 20%;
+    background-color: blueviolet;
+}

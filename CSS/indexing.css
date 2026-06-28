@@ -1,0 +1,36 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 200%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.heading{
+    text-align: center;
+}
+
+.container{
+    height: 20%;
+    width: 20%;
+    background-color: aqua;
+    position: relative;
+}
+
+.diff{
+    background-color: blue;
+    height: 20%;
+    width: 20%;
+    position: absolute; /*before it was the children of the container, now it'll become children of the body, but if you want it to be container's children only then make container as relative*/
+    z-index: 2;
+}
+.diff2{
+    background-color: brown;
+    height: 20%;
+    width: 20%;
+    z-index: 1; /*jiska z-index ka value jyada hoga wo upar dikhega, so brown niche rahega, and z-index only works with positions*/
+    position: absolute;
+    left: 10%;
+}

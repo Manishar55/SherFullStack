@@ -1,0 +1,66 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 200%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.heading{
+    text-align: center;
+}
+
+.container{
+    height: 50%;
+    width: 50%;
+    background-color: aqua;
+    position: relative;
+}
+.box{
+    background-color: blueviolet;
+    height: 10%;
+    margin-bottom: 5px;
+}
+
+.box:first-child{
+    background-color:chartreuse;
+}
+.box:nth-child(2){
+    background-color: rgb(228, 125, 22);
+    /* transform: scale(2); */
+}
+.box:nth-child(3){
+    background-color: crimson;
+}
+.box:nth-child(6){
+    background-color: rgb(245, 147, 167);
+}
+
+.box:nth-child(2):hover{
+    background-color: black;
+    transform: translate(100px, 0);
+}
+
+input{
+    width: 30%;
+    outline: none;
+}
+input:focus{ /*focus is used whenever you click on something*/
+    border: 5px solid rgb(80, 247, 80);
+    transition: 1s;
+}
+
+button{
+    transition: all 2s ease-in;
+}
+button:hover{
+    background-color: blue;
+    transform: scale(2);
+    /* transform: rotate(90deg); */
+}
+button:focus{
+    background-color: rgb(76, 8, 8);
+    color: aliceblue;
+}
