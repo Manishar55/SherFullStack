@@ -60,10 +60,11 @@ npm   vs   npx
 //we use npx when we execute node package directly in the terminal => npx vite
 //we use npm for so many things like:
 ->for installing dependencie
--> for running scripts
+-> for running scripts 
 
+"depedencies": used after deplyment also
 
-"devDependencies": these devDependencies are use for code and developement, but to run and deploy these depedencies are not needed
+"devDependencies": these devDependencies are only use for code and developement, but to run and deploy these depedencies are not needed
 eg->  "@eslint/js": it will scan the project and check the syntaxes like ';' need or not
 
 
