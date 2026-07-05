@@ -1,0 +1,130 @@
+//React creates virtual dom -> because it is light weight -> but real dom doesn't understand VD ->Then react DOM comes and 
+//virtual DOM ko real DOM k ek element se connect karta hai -> real dom k ek element ko virtual dom k root se attach kar dete h and ye root reactDOM se banta hai
+
+
+//VD me update hota h first then then Real DOM k saath compare hoke real DOM me update hota hai
+//whenever we update something in react -> whole process behind the sence  it is called recounciliation 
+//Recounciliation -> it's a process to updating real DOM, there are two phase in recounciliation
+//1. Render Phase
+//2. Commit phase
+
+//real DOM light weight copy -> Virtual DOM -> when we update something, a new VD gets created & updated -> then in
+//render phase, comparision between old VD vs new VD happens with the help of diffing algorith (it tracks changes) -> 
+//after comparision it stores updation ->in commit phase, updates integrates in real DOM -> comparison k baad new VD delete h jati hai
+
+//IN SHORT jitni bar chnages karoge utni bar new virtual DOM create hogi, fir wo old se compare hoga and realDOM update hoga and old vd delete ho jayega
+
+// React 2015 -> For recounciliation -> stack engine use hota tha (it executes line by line, it will stop other process)
+//from 2016 -> For recounciliation -> Fiber engine use hota hai (optimized)
+
+
+//------------------------------------------------------------------------------------------------------------------------------
+//npx create-react-app myapp => npx will help us to directly use any node package in the terminal
+
+//npm create vite@latest => creating a vite project
+React is a frontend library, vite is a tool 
+Vite is faster than create-react-app, and create-react-app ia a tool jiska use karke hum a react app bana sakte hai
+vite can not be cpmpared with react because react is a library 
+
+vite -> it is a builder tool it gives a boiler plate for creating a react projec, it contains a bundler and a compiler.
+
+//JSON=> javascript object notation, it looks like js object but it has nothing to do with js
+the package.json files tells us the metadata about the whole project, metadata is some extra data/info about something,
+like project name, version, dependencies and their versions
+
+Moduling=> dividing our code in small and reusable modules 
+Moduling in node.js are of two types
+1> Common js moduling     2> ES6 moduling
+
+"type": "module", => this means ES6 moduling
+"type": "commonjs", => this means common js moduling
+
+
+"scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
+  },
+
+ //scripts provides so many algorithms to run the project, and we can directly execute that projects, 
+ like for build, there is an already a algorithm, 
+ npm run dev => it will excute the vite command, and vite command is excuting the algorithms which starts our project
+
+ //we can use vite command directly also, but we cant directly write "vite", 
+ vites gives us an js package , and to execute a js package directly in the terminal we need to use npx
+ So we need to write=> npx vite
+
+
+npm   vs   npx
+//we use npx when we execute node package directly in the terminal => npx vite
+//we use npm for so many things like:
+->for installing dependencie
+-> for running scripts
+
+
+"devDependencies": these devDependencies are use for code and developement, but to run and deploy these depedencies are not needed
+eg->  "@eslint/js": it will scan the project and check the syntaxes like ';' need or not
+
+
+"^6.0.3"=> ^ indicates minor updates means that agar ye version mila toh thik hai, nhi toh iska koi minor latest updated version install kar lo, but koi major latest version install mat kar lena
+
+
+In ES6 moduling there are two types of exports
+1> default export  => export default funname, in default export name doesn't matter, default export puri file me kisi ek hi chiz ko kar sakte hai
+2> named export   => export funname, 
+
+
+//-----------------------------------------------------------------------------------------------------------------------------------------
+
+// start setting up a new react project
+
+//write in the terminal:
+
+//1. npx create-react-app first-app (first-app app name)
+//2. cd first-app
+//3. npm start
+//4. http://localhost:3000    //paste it in browser
+
+//5. deleted all the files in public folder except index.html
+//6. deleted all the files in src folder except iApp.js and index.js
+
+//7. deleted everything from index.js except these:
+
+// import React from 'react';
+// import ReactDOM from 'react-dom/client'; 
+// import App from './App';
+
+// const root = ReactDOM.createRoot(document.getElementById('root'));
+// root.render(
+//   <React.StrictMode>
+//     <App />
+//   </React.StrictMode>
+// );
+
+//8. delete everything from App.js except these:
+
+// function App() {
+//     return (
+//       <div>
+//         Welcome to react App
+//       </div>
+//     );
+//   }
+  
+//   export default App;
+
+
+
+///for vite project
+
+//React component: react component is nothing but a plain js file 
+//react components help you to combine your html css and js logic together in one reusable piece of code
+
+//to prepare this reusable code you can either you js functions(functional components) or js classes(class based components)
+
+
+
+
+
+
