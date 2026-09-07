@@ -1,0 +1,95 @@
+//Server-> server is a machine which is used to accept req (sent by the client) and send the reponse to the user/client
+
+//Biggest Storage Providers in the world (data centers):
+->AWS - Amazon Web Services
+->Microsoft Azure
+->GCS- Google Cloud Storage
+
+//Data centers - Data centers are the physical buildings and hardwares that that these providers own to actually hold your data
+-> Data centers are the hub of GPU and CPU which are connected to each other and generates computing power together
+
+//CPU(Central Processing Unit) vs GPU(Graphics Processing Unit)
+//CPU is slower it can do 1K tasks in a sec -> Processing Style=Serial Processing
+//GPU is faster it can do 1M tasks in a sec -> NVIDIA generates GPUs -> Processing Style=Parallel Processing
+
+//Internet:- 
+We get internet in India through undersea fiber optic cables that land on our coasts.These cables are laid across 
+the ocean floor and plug into heavily guarded buildings on our beaches called Cable Landing Stations.
+
+//1. Where Does the Internet Come From?
+The cables connecting India travel via two main underwater highways:
+
+From the West: Cables travel from Europe (France, UK, Germany), pass through the Red Sea and the Middle East (Oman, UAE), 
+and land on India's west coast.
+
+From the East: Cables travel from Southeast Asia (Singapore, Hong Kong, Japan) and land on India's east coast.
+
+//2. How it Reaches Your Device (The 4-Step Chain)
+
+1. The Ocean Floor: Data travels as fast pulses of light through the glass fibers inside these massive undersea cables.
+
+2. The Beach (Landing Hubs): The cables exit the ocean at major coastal cities—primarily Mumbai (handling 70% of traffic) 
+and Chennai.
+ 
+3. Under the Streets: Telecom companies (like Jio, Airtel, and Tata) pick up the data from the beach and send
+it across the country through a massive web of underground fiber cables buried beneath city roads.
+
+4. Through the Air: The underground cables connect directly to local cell towers or your home Wi-Fi router. 
+The tower/router converts the light into wireless radio waves, which beam directly into your phone.
+
+//web1- Read (1994 - 2007)
+//web2- Read + write (2007 - present)
+//web3- Read + write + own (decentralized- means all access will be with us, no one can delete our account without our permission eg-instagram, but this has not came yet) (2021 - developing)
+
+//-----------------------------------------------------------------------------------------------------------------------------
+//Server - A server is a computer hardware or software system that accepts requests and provides data, services, or resources to other computers, 
+known as clients, over a network
+
+//Node.js - Node.js is a free, open-source, cross-platform JavaScript runtime environment that lets developers write command-line tools 
+and server-side scripts outside a web browser.
+
+//before 2008, we had to write the backend code inside the browser only, then Ryan dahl separated the node.js from the browser 
+
+//Node.js provides us:
+1. Networks -> HTTP
+2. File System - (eg - VS code is made up of file system-- we create read update and delete files here)
+
+
+
+
+--------What is Nodemon and why use it?------------------
+
+->When building Node.js applications (like a backend server), running your app normally requires the command 
+node server.js. However, if you make any changes to your code, you have to manually stop the server (Ctrl + C) 
+and restart it to see those changes.
+->Nodemon (Node Monitor) automates this process. It keeps your terminal active, watches the files in your project directory, and automatically restarts your node application whenever it detects that you have saved a change
+
+step 1=> "npm i -g nodemon"
+step 2=> update package.json -> "main": "server.js",
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
