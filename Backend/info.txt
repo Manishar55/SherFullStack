@@ -1,4 +1,4 @@
-//Server-> server is a machine which is used to accept req (sent by the client) and send the reponse to the user/client
+//👉Server-> server is a machine which is used to accept req (sent by the client) and send the reponse to the user/client
 
 //Biggest Storage Providers in the world (data centers):
 ->AWS - Amazon Web Services
@@ -12,7 +12,7 @@
 //CPU is slower it can do 1K tasks in a sec -> Processing Style=Serial Processing
 //GPU is faster it can do 1M tasks in a sec -> NVIDIA generates GPUs -> Processing Style=Parallel Processing
 
-//Internet:- 
+//👉Internet:- 
 We get internet in India through undersea fiber optic cables that land on our coasts.These cables are laid across 
 the ocean floor and plug into heavily guarded buildings on our beaches called Cable Landing Stations.
 
@@ -45,15 +45,16 @@ The tower/router converts the light into wireless radio waves, which beam direct
 //Server - A server is a computer hardware or software system that accepts requests and provides data, services, or resources to other computers, 
 known as clients, over a network
 
-//Node.js - Node.js is a free, open-source, cross-platform JavaScript runtime environment that lets developers write command-line tools 
+//👉Node.js - Node.js is a free, open-source, cross-platform JavaScript runtime environment that lets developers write command-line tools 
 and server-side scripts outside a web browser.
 
-//before 2008, we had to write the backend code inside the browser only, then Ryan dahl separated the node.js from the browser 
+//before 2008, we had to write the backend code inside the browser only, then Ryan dahl separated the node.js from 
+the browser now we can write and run the backend code in node
 
 //Node.js provides us:
-1. Networks -> HTTP
+1. Networks -> HTTP xml requests
 2. File System - (eg - VS code is made up of file system-- we create read update and delete files here)
-
+3. fetch APIs, DOM APIs
 
 
 
@@ -66,6 +67,115 @@ and restart it to see those changes.
 
 step 1=> "npm i -g nodemon"
 step 2=> update package.json -> "main": "server.js",
+step 3=> npx nodemon / npx nodemon server.js
+
+=================================Day 2============================================
+
+Flipcart.com
+Products -> /products (these are the endpoints of your API)
+Cart-> /cart
+
+//👉express.js-> Express.js is a lightweight toolkit that makes it much easier to build web servers and APIs using JavaScript.
+It runs inside Node.js (the environment that lets JavaScript run on a computer instead of just inside a web browser)
+
+If Node.js is the car engine, Express.js is the steering wheel, dashboard, and pedals that make driving the car simple.
+
+Technically, you can build a web server using only raw Node.js, but it requires writing a lot of complex, repetitive code 
+just to handle basic tasks. Express.js provides pre-written shortcuts so you don't have to reinvent the wheel
+
+It mainly simplifies three things:
+//1. Routing: Directing users to the right place. For example, telling the server: "If someone visits ://mywebsite.com, 
+show them the contact page". 
+
+//2. Handling Requests & Responses: Easily reading information sent by a user (like a login password) and sending back the 
+right response (like logging them in or showing an error). 
+
+//3. Middleware: Plug-and-play features. These are tiny helper programs you can drop into your server to handle complex tasks
+automatically, like checking if a user is logged in, or logging data for security.
+Before your server sends back a webpage or data, the request has to pass through these helpers first. They check, change, or filter the request.
+
+
+💻Developers use middleware to handle repetitive tasks automatically. Here are the most common uses:
+
+//1. Authentication (The Bouncer): It checks if a user is logged in. If they are, it lets them see their profile. 
+If not, it redirects them to the login page.
+
+//2. Logging (The Tracker): It takes a note of every single person who visits your site 
+(e.g., "User at 10:15 PM visited the shop page") and saves it to a file.
+
+//3. Data Parsing (The Translator): If a user fills out a form, the data arrives at the server as a giant, messy lump 
+of text. Middleware converts that text into a clean JavaScript object that your code can easily read.
+
+------>What it looks like in code:
+
+//👉Here is what a tiny Express.js server looks like. 
+
+const express = require('express'); // 1. Bring in the Express toolkit
+const app = express();              // 2. Create the application
+
+app.get('/', (req, res) => {
+  res.send('Hello, welcome to my website!');
+});
+app.listen(3000);
+
+
+📋Middleware functions run in order, one after the other. They use a special function called next() to pass the request to the next step.
+
+app.use((req, res, next) => {
+  console.log("Someone just made a request to the server!");
+  next(); // 👈 This tells Express to move to the next middleware or final page
+});
+
+
+👉Protocols- set of rules
+we are following http(hyper test transfer protocol) method to create servers -> 
+req and res are the protocols of http:
+req-> accept any API
+res-> response to that API
+
+//There are many protocols:
+🌐 For Web Browsing: HTTP and HTTPS.
+📧 For Email: SMTP (sending), IMAP and POP3 (receiving).
+📁 For File Sharing: FTP, SFTP, and SMB.
+⚙️ For Internet Infrastructure: DNS (translates website names to IP addresses) 
+and DHCP (gives your phone an IP address when you connect to Wi-Fi).
+🔒 For Secure Access: SSH (remote control for servers)
+web socket
+🌐 For two way communication: WebSockets
+
+Communication Protocols-> Formats and transmits basic data between devices. ->HTTP, SMTP (Emails), WebSockets (Live chats), TCP, IP, UDP
+Security Protocols-> Encrypts data to prevent spying and hacking. -> HTTPS, TLS, SSL, SSH
+Management Protocols -> Helps network admins maintain and troubleshoot routers and servers. -> ICMP (Ping), SNMP, DHCP
+
+### 🌐 For Web Browsing & Apps
+* HTTP – Fetches standard webpages and data.
+* HTTPS – The secure, encrypted version of HTTP.
+* WebSockets – (two way communication) Keeps a live, two-way connection open for real-time apps like live chats, stock tickers, and online games.
+
+### 📧 For Email
+* SMTP – Sends your emails out to the internet.
+* IMAP – Retrieves and syncs emails so you can read them on multiple devices.
+* POP3 – An older protocol that downloads emails to a single device and deletes them from the server.
+
+### 📁 For File Sharing
+* FTP / SFTP – Moves files between computers (SFTP adds security).
+* SMB – Allows computers on the same local network to share files and printers.
+
+### ⚙️ For Internet Infrastructure & Automation
+* DNS – The phonebook of the internet; translates domain names (like google.com) into IP addresses.
+* DHCP – Automatically assigns an IP address to your device when you connect to Wi-Fi.
+* SSH – Allows developers to securely log into and control remote servers via a terminal.
+
+
+
+
+
+
+
+
+
+
+
 
 
 
