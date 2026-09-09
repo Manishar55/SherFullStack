@@ -111,7 +111,7 @@ of text. Middleware converts that text into a clean JavaScript object that your 
 //👉Here is what a tiny Express.js server looks like. 
 
 const express = require('express'); // 1. Bring in the Express toolkit
-const app = express();              // 2. Create the application
+const app = express();              // 2. Create the application ->putting express functionality into app
 
 app.get('/', (req, res) => {
   res.send('Hello, welcome to my website!');
@@ -165,6 +165,73 @@ Management Protocols -> Helps network admins maintain and troubleshoot routers a
 * DNS – The phonebook of the internet; translates domain names (like google.com) into IP addresses.
 * DHCP – Automatically assigns an IP address to your device when you connect to Wi-Fi.
 * SSH – Allows developers to securely log into and control remote servers via a terminal.
+
+//-----------------------------------------------------------------------------------------------------------
+📋What is HTTP?
+It is a set of rules that allows your web browser, phone, or computer to send messages back and forth with a website's server.
+
+What are HTTP Methods?
+When you send a message over the internet, you have to tell the server what you want it to do. HTTP Methods (also called verbs) 
+are the action words in that message.
+
+The most common ones are:
+GET - Read -> Retrieves data from the server without modifying anything.
+POST - Create -> Submits new data to the server to create a new resource.
+PUT - Update -> Completely replaces an existing resource or creates it if it doesn't exist.
+PATCH - Update -> Applies partial modifications to a resource.
+DELETE - Delete -> Permanently removes a specific resource from the server.
+
+📋What is a REST API?
+REST is just a highly organized set of style guidelines for building that API.
+
+What are REST API Methods?
+REST API methods are actually the exact same HTTP methods (GET, POST, PUT, DELETE), but they are strictly organized to
+handle data in a predictable database loop called CRUD:
+
+POST = Create (Add a new user)
+GET = Read (View a user's profile)
+PUT / PATCH = Update (Edit a profile)
+DELETE = Delete (Remove a user)
+
+👉The Relation Between HTTP and REST API Methods
+
+HTTP provides the tools: It gives us the verbs (GET, POST, etc.). However, HTTP doesn't care how you use them. 
+You could technically use a GET request to delete a file, even though it's bad practice.
+
+REST provides the rules: REST is a design philosophy that forces you to use HTTP methods correctly and cleanly. 
+In a REST API, you must use GET only to read, POST only to create, and URLs must always target "things" (like /users or /products).
+
+ 
+//Express doesn't know how to catch text data in req so it uses a middleware called express.json using 'use' method
+//'use' method is used for middlewares
+
+req accepts frontend data in various fomat:
+1. body -> form data - came from frontend data
+2. query -> for pagination - for search (extra data in path)
+3. params -> for dynamic URLs (products/id) -> dynamic id
+4. Files -> FTP
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

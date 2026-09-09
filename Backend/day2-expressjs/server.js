@@ -25,11 +25,22 @@ server.listen(3000, ()=>{
 
 const express = require("express");
 const app= express();
+// console.log(app);
+
+app.use(express.json()); //middleware for accepting data from frontend
 
 app.get("/", (req, res)=>{
     res.send("express is running....")
 });
 
-app.listen(4000, ()=>{
-    console.log('Express Server is running on port 4000');
-});
+app.post("/create", (req, res)=>{
+    res.send("response sent!!")
+    console.log(req.body); //{ name: 'Manisha' } ->after sending a POST req from Postman
+})
+
+// app.listen(4000);
+
+let port=4000
+app.listen(port, ()=>{
+    console.log(`Express Server is running on ${port}`);
+}); 
