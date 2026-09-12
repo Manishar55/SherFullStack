@@ -179,7 +179,7 @@ The most common ones are:
 GET - Read -> Retrieves data from the server without modifying anything.
 POST - Create -> Submits new data to the server to create a new resource.
 PUT - Update -> Completely replaces an existing resource or creates it if it doesn't exist.
-PATCH - Update -> Applies partial modifications to a resource.
+PATCH - Update -> Applies partial modifications to a resource. -> Only send the fields you want to change 
 DELETE - Delete -> Permanently removes a specific resource from the server.
 
 📋What is a REST API?
