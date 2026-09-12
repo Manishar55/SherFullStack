@@ -77,6 +77,7 @@ Cart-> /cart
 
 //👉express.js-> Express.js is a lightweight toolkit that makes it much easier to build web servers and APIs using JavaScript.
 It runs inside Node.js (the environment that lets JavaScript run on a computer instead of just inside a web browser)
+-> express.js is a framework for node.js
 
 If Node.js is the car engine, Express.js is the steering wheel, dashboard, and pedals that make driving the car simple.
 
@@ -211,15 +212,14 @@ req accepts frontend data in various fomat:
 3. params -> for dynamic URLs (products/id) -> dynamic id
 4. Files -> FTP
 
+📋CRUD Operations- represent the four basic actions you can perform on a database.
 
+=>CRUD is a conceptual framework for managing data, while HTTP provides the actual tools (methods) to execute those actions over the internet.
 
-
-
-
-
-
-
-
+Create - Adds new data or a new record -> POST
+Read - Retrieves or views existing data. -> GET
+Update - Modifies an existing record. -> PUT/PATCH
+Delete - Removes a record. -> DELETE
 
 
 
