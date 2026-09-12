@@ -56,16 +56,17 @@ app.delete('/delete/:id', (req, res)=>{
 
 
 //update
+//put -> entire resource/object will be replaced
 app.put('/update/:id', (req, res)=>{
 
     let { id } = req.params;
     let { name } = req.body; //we are taking name from the body
 
-    let updatedData = data.map((val)=>
-        val.id===id ? {...val, name } : val //update name and keep other values as it is
+    let updatedData = data.map((val)=>      //The spread operator copies all existing fields, and then name overwrites the old name -> means creating a new object
+        val.id===id ? {...val, name } : val //it will update the name only because we are creating a new object here
     );
     res.send(updatedData);
-});
+}); //we can also use patch here in the same code
 
 
 let port = 3000;
