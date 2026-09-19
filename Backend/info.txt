@@ -221,15 +221,181 @@ Read - Retrieves or views existing data. -> GET
 Update - Modifies an existing record. -> PUT/PATCH
 Delete - Removes a record. -> DELETE
 
+//database-------------------------------------------------------------------------------------------------------
+//there are two types of DB
+1. Relational -> Sequence, Tabular form, structured -> SQL, MySQL, posgress
+2. Non-Relational -> Jumbled form with unique identity -> MongoDB, GraphQL
 
 
+MongoDB is a company which provides 3 things:
+1. DB -> storage
+2. Atlas ->Database/storage provider
+3. GUI -> Compass for visualization
+
+=> Go to mongoDB atlas (https://www.mongodb.com/products/platform/atlas-database) -> create organization -> create project -> create cluster (means the actual DB)
+-> we took machine + storage -> AWS
+-> cluster created -> copy password
+-> connect with your project
+-> copy connection string 
+-> paste connection string in the mongoDB compass -> add password
+-> now the DB is connected with compass 
+-> now we have to connect it with our project in VS code 
 
 
+📋difference between mongoDB, mongoDB Compass and MongoDB Atlas in simple words
+MongoDB = Database software  (Your computer/server or cloud)
+MongoDB Compass = GUI/Tool to see/manage the database (Your computer)
+MongoDB Atlas = Cloud service for MongoDB, Cloud service where the database runs (Internet/cloud)
+
+1. MongoDB-> MongoDB is the actual database system.
+It stores your data in collections and documents instead of tables and rows like SQL databases.
+example:
+{
+  "name": "Manisha",
+  "age": 24,
+}
+
+2. MongoDB Compass-> Compass is a GUI application used to interact with MongoDB.
+Instead of writing everything through the command line, you can open Compass and visually see:
+
+Databases
+Collections
+Documents
+Insert/update/delete data
+Run queries
+Create indexes
+
+3. MongoDB Atlas-> Atlas is a cloud service that provides MongoDB databases. Atlas is MongoDB's cloud platform.
+Instead of installing and running MongoDB on your own computer, Atlas runs your MongoDB database in the cloud.
+
+For example:
+
+Your Node.js Application
+        |
+        | Internet
+        ↓
+   MongoDB Atlas
+        |
+        ↓
+    Your Database
 
 
+📋why we created cluster at mongoDB atlas and connected with mongoDB compass ???
+
+Because Compass itself doesn't contain your database.
+Compass is just a tool for accessing MongoDB.
+A cluster is basically the place where your MongoDB database lives in the cloud.the cluster provides the actual MongoDB database environment in the cloud.
+
+We create a cluster in Atlas to host our MongoDB database in the cloud, and we connect Compass to that cluster so we 
+can easily view and manage the database visually.
+
+📋Express can't directly communicate with MongoDB
+-> so we use Mongoose as a transpiler to communicate between Express and MongoDB
+
+//--------------------------------------------------------------------------------------------------------------
+📋Mongoose-> Mongoose is a tool/library that helps your Node.js application work with MongoDB more easily.
+Mongoose acts as a middle layer between your application and MongoDB.
+
+Suppose your Node.js application receives this data:
+{
+    name: "Manisha",
+    age: 24,
+    email: "manisha@gmail.com"
+}
+
+You want to save it in MongoDB.
+
+With Mongoose, you can define what a user should look like:
+
+const userSchema = new mongoose.Schema({
+    name: String,
+    age: Number,
+    email: String
+});
 
 
+📋The 3 important things Mongoose provides:
+👉1. Schema-> A schema defines the structure of your data.
 
+const userSchema = new mongoose.Schema({
+    name: String,
+    age: Number,
+    email: String
+});
+
+👉2. Model-> A model is what you use in your code to interact with a collection.
+
+const User = mongoose.model("User", userSchema);
+
+
+👉3. Validation-> Mongoose can check whether data follows the rules you defined.
+
+For example:
+const userSchema = new mongoose.Schema({
+    name: {
+        type: String,
+        required: true
+    },
+    age: {
+        type: Number,
+        required: true
+    }
+});
+Now if you try to create a user without a name, Mongoose can give you a validation error.
+
+📋Mongoose is an ODM.-> Mongoose takes your JavaScript object and automatically converts it into a MongoDB document, and vice versa.
+
+What is ODM?
+ODM = Object Document Mapper
+Object → JavaScript objects in Node.js
+Document → MongoDB documents (JSON-like data)
+Mapper → Converts one into the other
+
+Mongoose is an ODM (Object Document Mapper) for MongoDB. It maps JavaScript objects to MongoDB documents and provides 
+schemas, models, validation, and an easy API to perform CRUD operations.
+
+📋
+📋
+📋
+📋
+📋
+📋
+📋
+📋
+📋
+📋
+📋
+📋
+📋
+📋
+📋
+📋
+📋
+📋
+📋
+📋
+📋
+📋
+📋
+📋
+📋
+📋
+📋
+📋
+📋
+📋
+📋
+📋
+📋
+📋
+📋
+📋
+📋
+📋
+📋
+
+manisharana02005_db_user
+s62OBZmYsAnk0pWi
 
 
 
