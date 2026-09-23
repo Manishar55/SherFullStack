@@ -359,8 +359,58 @@ we can also say
 Mongoose is an Object Data Modeling (ODM) library for MongoDB and Node.js. It provides schemas and models to define, 
 validate, and interact with MongoDB documents easily.
 
-📋
-📋
+
+//-------------------------------------------------------------------------------------------------
+📋File structure
+1. MVC (Model view controller)
+2. layer Architecture
+3. Service based folter structure
+
+M → Model       → Data/database
+V → View        → UI/presentation
+C → Controller  → Request/application logic
+
+1. models/ → Database structure
+Contains your Mongoose schemas and models.
+
+2. routes/ → URLs/endpoints
+Defines your API endpoints.
+
+3. controllers/ → Request handling
+Contains the actual logic for handling requests.
+
+4. services/ → Business logic
+This is where you can put more complicated business operations.
+
+5. middleware/ → Functions that run between request and response
+For example, authentication:
+
+6. config/ → Configuration
+For example, database connection:
+
+Routes = where the request goes
+Controllers = what to do
+Services = business logic
+Models = how data is structured/accessed
+Middleware = checks/functions in between
+Config = application setup
+
+📋How everything connects
+Client
+  ↓
+Route
+  ↓
+Middleware
+  ↓
+Controller
+  ↓
+Service
+  ↓
+Model
+  ↓
+MongoDB
+
+
 📋
 📋
 📋
