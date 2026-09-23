@@ -232,7 +232,7 @@ MongoDB is a company which provides 3 things:
 2. Atlas ->Database/storage provider
 3. GUI -> Compass for visualization
 
-=> Go to mongoDB atlas (https://www.mongodb.com/products/platform/atlas-database) -> create organization -> create project -> create cluster (means the actual DB)
+=> Go to mongoDB atlas (https://www.mongodb.com/products/platform/atlas-database) -> create organization -> create project -> create cluster (means the actual DB) -> machine(free), AWS, deploy
 -> we took machine + storage -> AWS
 -> cluster created -> copy password
 -> connect with your project
@@ -293,6 +293,7 @@ can easily view and manage the database visually.
 -> so we use Mongoose as a transpiler to communicate between Express and MongoDB
 
 //--------------------------------------------------------------------------------------------------------------
+//npm i mongoose
 📋Mongoose-> Mongoose is a tool/library that helps your Node.js application work with MongoDB more easily.
 Mongoose acts as a middle layer between your application and MongoDB.
 
@@ -353,6 +354,10 @@ Mapper → Converts one into the other
 
 Mongoose is an ODM (Object Document Mapper) for MongoDB. It maps JavaScript objects to MongoDB documents and provides 
 schemas, models, validation, and an easy API to perform CRUD operations.
+
+we can also say 
+Mongoose is an Object Data Modeling (ODM) library for MongoDB and Node.js. It provides schemas and models to define, 
+validate, and interact with MongoDB documents easily.
 
 📋
 📋
