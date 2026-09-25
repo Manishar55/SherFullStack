@@ -1,3 +1,11 @@
+npm init -y
+npm i express mongoose
+step 1=> "npm i -g nodemon"
+step 2=> update package.json -> "main": "server.js",
+step 3=> npx nodemon / npx nodemon server.js
+
+ctrl+R-> Reload mongoDB compass
+
 //👉Server-> server is a machine which is used to accept req (sent by the client) and send the reponse to the user/client
 
 //Biggest Storage Providers in the world (data centers):
@@ -293,6 +301,12 @@ can easily view and manage the database visually.
 -> so we use Mongoose as a transpiler to communicate between Express and MongoDB
 
 //--------------------------------------------------------------------------------------------------------------
+
+MongoDB is flexible it can store both structured and unstructured data
+=> But in backend we need proper structure of everything, so we use mongoose
+
+structure: Class(blueprint of an object) -> schema -> mongoose provides schema 
+
 //npm i mongoose
 📋Mongoose-> Mongoose is a tool/library that helps your Node.js application work with MongoDB more easily.
 Mongoose acts as a middle layer between your application and MongoDB.
