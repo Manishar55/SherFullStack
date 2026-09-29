@@ -15,7 +15,7 @@ app.post("/create", async (req, res)=>{
 
     let { title, description }= req.body;
 
-    //All mongoose operations will always return a promise
+    //All mongoose operations will always return a promise, notesModel is a mongoose operation so we need to use async & await
     const newNote= await notesModel.create({ //create is query in DB
         title,
         description,
