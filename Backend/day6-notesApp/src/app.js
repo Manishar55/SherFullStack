@@ -3,6 +3,7 @@ const express = require("express");
 const notesModel = require("./models/notes.model");
 const connectDB= require('./config/db');
 const createNotesController = require("./controllers/notes.controller");
+const notesRoute = require('./routes/notes.route');
 
 const app=express();
 app.use(express.json());
@@ -34,6 +35,15 @@ app.get('/', (req, res)=>{ //controller
 // });
 
 //now the above is present at notes.controller.js -> created to write logics there
-app.post('/create', createNotesController);
+
+// app.post('/create', createNotesController); //now this code is at notes.route.js
+
+app.use('/notes', notesRoute); // '/notes' path par ek page link kiye h
 
 module.exports=app; //using common js
+
+//MVC
+//app.js 
+// const notesRoute = require('./routes/notes.route')       notes.route.js                                          notes.controller.js
+//app.use('/notes', notesRoute)                     <------ router.post('/create', createNotesController); <------  logic{...}
+//                                                          module.exports=router;                                  module.exports = createNotesController;
