@@ -424,6 +424,19 @@ Model
   ↓
 MongoDB
 
+
+Router-> The Router is responsible for defining the application's endpoints (URLs) and mapping them to specific 
+HTTP methods (like GET, POST, PUT, DELETE)
+What it does: It listens for incoming client requests, checks the URL path and the HTTP method, and forwards 
+the request to the correct handler
+
+Controller-> The Controller contains the actual business logic and implementation code that executes when a route is matched
+What it does: It accepts the incoming request data (like parameters, query strings, or body data), interacts with 
+database models if necessary, processes the data, and sends back the final HTTP response (like JSON data or HTML)
+
+Router = decides where the request should go
+Controller = contains the actual logic for handling the request
+
 //------------------------------------------------------------------------------------------
 📋Status codes -> a three-digit number sent by a web server to a browser or client application to indicate the outcome of a request.
 
@@ -479,11 +492,12 @@ You install/manage MongoDB	  Atlas manages the database infrastructure
 Local MongoDB → localhost:27017 → no Atlas needed.
 MongoDB Atlas → Atlas connection string → Atlas cluster needed.
 
+//------------------------------------------------------------------------------------------------------
+📋dotenv-> dotenv is a zero-dependency module that loads environment variables from a .env file into process.env in Node.js applications.
+npm install dotenv
 
 
 
-
-📋
 📋
 📋
 📋

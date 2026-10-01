@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 
 const connectDB = async()=>{
     try{
-        await mongoose.connect("mongodb://localhost:27017/notes-app"); //using local database
+        await mongoose.connect(process.env.mongodb_uri); //using local database
         console.log('mongoDB connected');
     }
     catch(err){
