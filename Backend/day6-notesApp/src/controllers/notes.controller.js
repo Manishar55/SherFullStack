@@ -47,7 +47,25 @@ const getSingleNoteController = async(req, res) => {
         });
     }
     catch(err){
-        console.log("err is single note api", err);  
+        console.log("err in single note api", err);  
+    }
+};
+
+const updateNotesController = async(req, res)=>{
+    try{
+        let noteId = req.params.id;
+        let body = req.body;
+        let updatedNote = await notesModel.findByIdAndUpdate(noteId, body, {new:true}); //{new:true} used to send the updated data in response
+
+        return res.status(200).json({
+            message: "note updated successfully",
+            data: updatedNote,
+        });
+    }
+    catch(err){
+        return res.status(500).json({
+            message: "Internal server error",
+        });
     }
 };
 
@@ -55,4 +73,5 @@ module.exports = {
     createNotesController, 
     getAllNotesController,
     getSingleNoteController,
+    updateNotesController,
 };

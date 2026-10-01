@@ -1,6 +1,6 @@
 
 const express = require('express');
-const {createNotesController, getAllNotesController, getSingleNoteController} = require('../controllers/notes.controller');
+const {createNotesController, getAllNotesController, getSingleNoteController, updateNotesController} = require('../controllers/notes.controller');
 
 const router = express.Router();
 
@@ -8,6 +8,6 @@ const router = express.Router();
 router.post('/create', createNotesController); //now for creating a post req we have to use "http://localhost:3000/notes/create"
 router.get('/allNotes', getAllNotesController); // '/notes' route has two sub routes /notes/create &-> "http://localhost:3000/notes/allNotes"
 router.get('/:id', getSingleNoteController);
-
+router.put('/:id', updateNotesController);
 
 module.exports=router;
