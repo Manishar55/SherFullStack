@@ -1,6 +1,6 @@
 
 const express = require('express');
-const {createNotesController, getAllNotesController, getSingleNoteController, updateNotesController, deleteNotesController} = require('../controllers/notes.controller');
+const {createNotesController, getAllNotesController, getSingleNoteController, updateNotesController, deleteNotesController, singleEntityUpdateController} = require('../controllers/notes.controller');
 
 const router = express.Router();
 
@@ -10,5 +10,6 @@ router.get('/allNotes', getAllNotesController); // '/notes' route has two sub ro
 router.get('/:id', getSingleNoteController);
 router.put('/:id', updateNotesController);
 router.delete('/:id', deleteNotesController);
+router.patch('/:id/single', singleEntityUpdateController);
 
 module.exports=router;

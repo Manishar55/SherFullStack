@@ -51,6 +51,7 @@ const getSingleNoteController = async(req, res) => {
     }
 };
 
+//PUT
 const updateNotesController = async(req, res)=>{
     try{
         let noteId = req.params.id;
@@ -87,10 +88,32 @@ const deleteNotesController = async (req, res)=>{
     }
 }
 
+//PATCH
+const singleEntityUpdateController= async(req, res)=>{
+    try{
+        let noteId = req.params.id;
+        let body=req.body;
+
+        let updatedNote = await notesModel.findByIdAndUpdate(noteId, body, {new:true});
+
+        return res.status(200).json({
+            message: "notes updated successfully",
+            data: updatedNote,
+        });
+    }
+    catch(err){
+        return res.status(500).json({
+            message: "Internal server error",
+        });
+    }
+}
+
+
 module.exports = {
     createNotesController, 
     getAllNotesController,
     getSingleNoteController,
     updateNotesController,
-    deleteNotesController, //to be pushed in github
+    deleteNotesController, 
+    singleEntityUpdateController,
 };
