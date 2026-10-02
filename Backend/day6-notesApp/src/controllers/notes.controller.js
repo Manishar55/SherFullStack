@@ -69,9 +69,28 @@ const updateNotesController = async(req, res)=>{
     }
 };
 
+const deleteNotesController = async (req, res)=>{
+    try{
+        let noteId = req.params.id;
+
+        await notesModel.findByIdAndDelete(noteId);
+
+        return res.status(200).json({
+            message: "Note deleted successfully",
+            // data: note,
+        });
+    }
+    catch(err){
+        return res.status(500).jso({
+            message: "Internal server error",
+        });
+    }
+}
+
 module.exports = {
     createNotesController, 
     getAllNotesController,
     getSingleNoteController,
     updateNotesController,
+    deleteNotesController, //to be pushed in github
 };
