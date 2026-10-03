@@ -1,6 +1,7 @@
 
 import React, {useEffect, useState} from "react";
 import axios from "axios";
+import NoteCard from "./components/NotesCard";
 
 const App = () => {
 
@@ -44,10 +45,10 @@ const App = () => {
   }, []);
 
   return (
-    <div className="h-screen p-5">
-      <h1 className="text-3xl font-semibold mb-3">Notes App</h1>
+    <div className=" p-5 bg-blue-950">
+      <h1 className="text-3xl font-semibold mb-3 text-white">Notes App</h1>
 
-      <form onSubmit={handleSubmit} className="border flex flex-col w-100 p-4 gap-5 bg-blue-100 rounded" action="">
+      <form onSubmit={handleSubmit} className="border flex flex-col w-100 p-4 gap-5 bg-blue-50 rounded mb-6" action="">
         <input 
           onChange={handleChange}
           name="title"
@@ -70,9 +71,11 @@ const App = () => {
 
       </form>
 
-      <div>
+      <div className="flex gap-4 flex-wrap justify-between">
         {
-          
+          allNotes.map((val)=>(
+            <NoteCard key={val._id} note={val}/>
+          ))
         }
       </div>
     </div>
