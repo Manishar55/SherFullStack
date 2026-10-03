@@ -497,8 +497,20 @@ MongoDB Atlas → Atlas connection string → Atlas cluster needed.
 npm install dotenv
 
 
+📋CORS(Cross-Origin Resource Sharing)- A CORS error is a security mechanism enforced by web browsers that blocks a 
+web application on one domain from accessing resources on a different domain without explicit permission. 
 
-📋
+=>CORS is a security policy in browser which will not allow to communicate or share resource from cross Origin (nmatched origins)
+(frontend) http://localhost:5173/  <---------> http://localhost:3000/ (backend)
+
+=> CORS is a Node.js middleware for Express/Connect that sets CORS response headers. These headers tell browsers 
+which origins can read responses from your server.
+//https://www.npmjs.com/package/cors
+//npm i cors -> install cors in backend
+
+
+
+
 📋
 📋
 📋

@@ -17,7 +17,9 @@ const createNotesController=  async(req, res)=>{
         });
     }
     catch(error){
-        console.log('error occured in creation', error);
+         return res.status(500).json({
+            message: "Internal server error",
+        });
     }
 };
 
